@@ -9,8 +9,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    //    private static final String APIKEY = "5753db64c667d9ed89962813328c19be";
-//    APIInterface apiInterface;
+    private static final String APIKEY = "5753db64c667d9ed89962813328c19be";
+
+    //
+
     TextView pressure, temp, wind, desc, cityName;
     EditText editText;
     Button submit;
@@ -22,14 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         instantiateViews();
 
-//        apiInterface = ApiClient.getClient().create(APIInterface.class);
+        //
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String zipCode = editText.getText().toString();
                 editText.getText().clear();
-                editText.clearFocus();
                 fetchData(zipCode);
             }
         });
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void fetchData(String zipCode) {
+
 
     }
 
